@@ -7,8 +7,13 @@ FROM codercom/code-server:latest
 #RUN chown root:root /usr/bin/sudo
 #RUN chmod 4755 /usr/bin/sudo
 
-RUN chown root:dyno /etc/sudoers
+#RUN chown root:dyno /etc/sudoers
+#RUN chmod 440 /etc/sudoers
+
+RUN chmod 755 /usr/bin/sudo
+RUN chown root:dyno /usr/bin/sudo
 RUN chmod 440 /etc/sudoers
+RUN chown root:dyno /etc/sudoers
 
 USER coder
 
