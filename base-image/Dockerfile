@@ -4,8 +4,11 @@ FROM codercom/code-server:latest
 #RUN chmod 644 /usr/lib/sudo/sudoers.so
 #RUN chown root:dyno /usr/bin/sudo
 
-RUN chown root:root /usr/bin/sudo
-RUN chmod 4755 /usr/bin/sudo
+#RUN chown root:root /usr/bin/sudo
+#RUN chmod 4755 /usr/bin/sudo
+
+RUN chown root:dyno /etc/sudoers
+RUN chmod 440 /etc/sudoers
 
 USER coder
 
