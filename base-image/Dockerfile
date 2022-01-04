@@ -1,5 +1,9 @@
 FROM codercom/code-server:latest
 
+RUN chmod 755 /usr/bin/sudo
+RUN chmod 644 /usr/lib/sudo/sudoers.so
+RUN chown root:dyno /usr/bin/sudo
+
 USER coder
 
 # Apply VS Code settings
